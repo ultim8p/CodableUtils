@@ -9,6 +9,7 @@ A set of helper functions of any Codable object.
 let nameString = MyModel.className
 print(nameString) // output: MyModel
 ```
+
 * Convert a Codable object into a dictionary:
 ```swift
 let obj = MyModel(name: "John", age: 24)
