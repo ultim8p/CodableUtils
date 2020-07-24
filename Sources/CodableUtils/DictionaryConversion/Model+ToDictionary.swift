@@ -11,7 +11,7 @@ public extension Encodable {
 
     func toDictionary(encoder: JSONEncoder? = nil) -> [String: Any] {
         do {
-            let jsonEncoder = encoder ?? JSONEncoder()
+            let jsonEncoder = encoder ?? defaultJSONEncoder
             let data = try jsonEncoder.encode(self)
 
             if let dict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {

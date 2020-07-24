@@ -12,7 +12,7 @@ public extension Dictionary {
         do {
             let data = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
                 
-            let jsonDecoder = decoder ?? JSONDecoder()
+            let jsonDecoder = decoder ?? defaultJSONDecoder
             let obj = try jsonDecoder.decode(type, from: data)
             
             return obj
